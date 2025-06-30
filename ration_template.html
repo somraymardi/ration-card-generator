@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ration Card</title>
+</head>
+<body>
+    <h2>राशन कार्ड</h2>
+    <p>Cardholder Name: {{ data.name }}</p>
+    <p>Father/Husband Name: {{ data.father_name }}</p>
+    <p>District: {{ data.district }}</p>
+    <p>Block: {{ data.block }}</p>
+    <p>Village: {{ data.village }}</p>
+    <h3>परिवार के सदस्य:</h3>
+    <table border="1">
+        <tr><th>Name</th><th>Age</th><th>Gender</th><th>Relation</th></tr>
+        {% for member in members %}
+        <tr>
+            <td>{{ member.name }}</td>
+            <td>{{ member.age }}</td>
+            <td>{{ member.gender }}</td>
+            <td>{{ member.relation }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
