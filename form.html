@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>राशन कार्ड जनरेटर</title>
+</head>
+<body>
+    <h2>राशन कार्ड विवरण भरें</h2>
+    <form action="/generate" method="POST">
+        <label>कार्डधारक का नाम:</label>
+        <input type="text" name="name" required><br><br>
+
+        <label>पिता / पति का नाम:</label>
+        <input type="text" name="father_name" required><br><br>
+
+        <label>जिला:</label>
+        <input type="text" name="district" required><br><br>
+
+        <label>प्रखंड:</label>
+        <input type="text" name="block" required><br><br>
+
+        <label>गांव:</label>
+        <input type="text" name="village" required><br><br>
+
+        <h3>परिवार के सदस्य:</h3>
+        <!-- Fixed 5 member fields -->
+        
+        <label>सदस्य 1 का नाम:</label>
+        <input type="text" name="member_name0"><br>
+        <label>आयु:</label>
+        <input type="text" name="member_age0">
+        <label>लिंग:</label>
+        <input type="text" name="member_gender0">
+        <label>संबंध:</label>
+        <input type="text" name="member_relation0"><br><br>
+    
+        <label>सदस्य 2 का नाम:</label>
+        <input type="text" name="member_name1"><br>
+        <label>आयु:</label>
+        <input type="text" name="member_age1">
+        <label>लिंग:</label>
+        <input type="text" name="member_gender1">
+        <label>संबंध:</label>
+        <input type="text" name="member_relation1"><br><br>
+    
+        <label>सदस्य 3 का नाम:</label>
+        <input type="text" name="member_name2"><br>
+        <label>आयु:</label>
+        <input type="text" name="member_age2">
+        <label>लिंग:</label>
+        <input type="text" name="member_gender2">
+        <label>संबंध:</label>
+        <input type="text" name="member_relation2"><br><br>
+    
+        <label>सदस्य 4 का नाम:</label>
+        <input type="text" name="member_name3"><br>
+        <label>आयु:</label>
+        <input type="text" name="member_age3">
+        <label>लिंग:</label>
+        <input type="text" name="member_gender3">
+        <label>संबंध:</label>
+        <input type="text" name="member_relation3"><br><br>
+    
+        <label>सदस्य 5 का नाम:</label>
+        <input type="text" name="member_name4"><br>
+        <label>आयु:</label>
+        <input type="text" name="member_age4">
+        <label>लिंग:</label>
+        <input type="text" name="member_gender4">
+        <label>संबंध:</label>
+        <input type="text" name="member_relation4"><br><br>
+    
+        <button type="submit">📄 Generate PDF</button>
+    </form>
+</body>
+</html>
