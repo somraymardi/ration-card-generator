@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>राशन कार्ड जनरेटर</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>राशन कार्ड विवरण भरें</h2>
+    <div id="form-content">
+        <label>कार्डधारक का नाम:</label>
+        <input type="text" id="name"><br>
+
+        <label>पिता / पति का नाम:</label>
+        <input type="text" id="father_name"><br>
+
+        <label>जिला:</label>
+        <input type="text" id="district"><br>
+
+        <label>प्रखंड:</label>
+        <input type="text" id="block"><br>
+
+        <label>गांव:</label>
+        <input type="text" id="village"><br>
+
+        <h3>परिवार के सदस्य:</h3>
+        <div id="members">
+            <!-- 5 Members -->
+            
+        <label>सदस्य 1 का नाम:</label><input type="text" id="member_name0"><br>
+        <label>आयु:</label><input type="text" id="member_age0">
+        <label>लिंग:</label><input type="text" id="member_gender0">
+        <label>संबंध:</label><input type="text" id="member_relation0"><br><br>
+    
+        <label>सदस्य 2 का नाम:</label><input type="text" id="member_name1"><br>
+        <label>आयु:</label><input type="text" id="member_age1">
+        <label>लिंग:</label><input type="text" id="member_gender1">
+        <label>संबंध:</label><input type="text" id="member_relation1"><br><br>
+    
+        <label>सदस्य 3 का नाम:</label><input type="text" id="member_name2"><br>
+        <label>आयु:</label><input type="text" id="member_age2">
+        <label>लिंग:</label><input type="text" id="member_gender2">
+        <label>संबंध:</label><input type="text" id="member_relation2"><br><br>
+    
+        <label>सदस्य 4 का नाम:</label><input type="text" id="member_name3"><br>
+        <label>आयु:</label><input type="text" id="member_age3">
+        <label>लिंग:</label><input type="text" id="member_gender3">
+        <label>संबंध:</label><input type="text" id="member_relation3"><br><br>
+    
+        <label>सदस्य 5 का नाम:</label><input type="text" id="member_name4"><br>
+        <label>आयु:</label><input type="text" id="member_age4">
+        <label>लिंग:</label><input type="text" id="member_gender4">
+        <label>संबंध:</label><input type="text" id="member_relation4"><br><br>
+    
+        </div>
+
+        <button onclick="generatePDF()">📄 Generate PDF</button>
+    </div>
+
+    <div id="pdf-content" style="display:none;">
+        <h2>झारखंड सरकार</h2>
+        <h3>राशन कार्ड</h3>
+        <p><strong>कार्डधारक का नाम:</strong> <span id="pdf_name"></span></p>
+        <p><strong>पिता / पति का नाम:</strong> <span id="pdf_father_name"></span></p>
+        <p><strong>जिला:</strong> <span id="pdf_district"></span></p>
+        <p><strong>प्रखंड:</strong> <span id="pdf_block"></span></p>
+        <p><strong>गांव:</strong> <span id="pdf_village"></span></p>
+        <h3>परिवार के सदस्य</h3>
+        <table border="1">
+            <thead>
+                <tr><th>क्रम</th><th>नाम</th><th>आयु</th><th>लिंग</th><th>संबंध</th></tr>
+            </thead>
+            <tbody id="pdf_members"></tbody>
+        </table>
+    </div>
+
+    <script src="html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
