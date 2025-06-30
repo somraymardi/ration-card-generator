@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>राशन कार्ड</title>
+    <style>
+        body { font-family: Devanagari, Arial, sans-serif; padding: 20px; }
+        h2, h3 { text-align: center; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid black; padding: 8px; text-align: center; }
+        .info { margin-top: 20px; line-height: 1.8; }
+    </style>
+</head>
+<body>
+    <h2>झारखंड सरकार</h2>
+    <h3>राशन कार्ड</h3>
+    <div class="info">
+        <strong>कार्डधारक का नाम:</strong> {{ data.name }}<br>
+        <strong>पिता / पति का नाम:</strong> {{ data.father_name }}<br>
+        <strong>जिला:</strong> {{ data.district }}<br>
+        <strong>प्रखंड:</strong> {{ data.block }}<br>
+        <strong>गांव:</strong> {{ data.village }}
+    </div>
+    <h3>परिवार के सदस्य</h3>
+    <table>
+        <tr>
+            <th>क्रम संख्या</th>
+            <th>नाम</th>
+            <th>आयु</th>
+            <th>लिंग</th>
+            <th>संबंध</th>
+        </tr>
+        {% for member in members %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ member.name }}</td>
+            <td>{{ member.age }}</td>
+            <td>{{ member.gender }}</td>
+            <td>{{ member.relation }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
